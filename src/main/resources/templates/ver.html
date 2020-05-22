@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="titulo"></title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+
+	<div class="card mb-3" style="max-width: 540px;">
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<img th:if="${inventario.foto != null}" th:src="@{'/fotos/'+ ${inventario.foto}}" class="card-img" th:alt="${inventario.producto}">
+			</div>
+			<div class="col-md-8">
+				<div class="card-body">
+					<h5 class="card-title" th:text=${inventario.producto}>Card
+						title</h5>
+					<p class="card-text" th:text=${inventario.descripcion}></p>
+					<p class="card-text">
+						<small class="text-muted" th:text=" 'Disponibles : ' + ${inventario.cantidad}" ></small>
+
+					</p>
+					<a th:href="@{/listado}" class="btn btn-primary">Ir al Listado</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
