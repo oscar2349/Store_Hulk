@@ -1,0 +1,5 @@
+INSERT INTO `inventario`(`id`, `producto`, `precio`, `Descripcion`, `Cantidad`,`foto`) VALUES (1,'Funda Celular',2300,'Samsumg A30',2,'FundaCelular.jpg');
+INSERT INTO `inventario`(`id`, `producto`, `precio`, `Descripcion`, `Cantidad`,`foto`) VALUES (2,'Billetera',5000,'Billetra Capitan America',400,'9d704b94-2bc1-4e7d-8e39-6e4c8ccfa842_Billetera.jpg');
+INSERT INTO `inventario`(`id`, `producto`, `precio`, `Descripcion`, `Cantidad`,`foto`) VALUES (3,'Gorra',23000,'Gorra Deportiva',2,'Gorras.jpg');
+INSERT INTO `inventario`(`id`, `producto`, `precio`, `Descripcion`, `Cantidad`,`foto`) VALUES (4,'Pegatinas',200,'stikers Varios Estilos',2000,'Adesivos.png');
+INSERT INTO `inventario`(`id`, `producto`, `precio`, `Descripcion`, `Cantidad`,`foto`) VALUES (5,'Revista',45000,'Revista Clasica',2,'Revista.png');
