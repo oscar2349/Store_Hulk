@@ -61,7 +61,7 @@
 					<td th:text="${Producto.precio}"></td>
 					<td th:text="${Producto.descripcion}"></td>
 					<td th:text="${Producto.cantidad}"></td>   
-					<td ><img alt="Imagen no encontrada" th:src="'fotos/'+ ${Producto.foto}"></td> 
+					<td ><img alt="Imagen no encontrada" th:src="'fotos/'+ ${Producto.foto}" width="80" height="80"></td> 
 					<td><a class="btn btn-primary btn-xs"
 						th:href="@{/form/} + ${Producto.id}" th:text="'editar'"></a></td>
 					<td><a class="btn btn-danger btn-xs"
