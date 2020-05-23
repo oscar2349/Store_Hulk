@@ -41,14 +41,14 @@
 							
 		
 		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>id</th>
-					<th>Producto</th>
-					<th>Precio</th>
-					<th>Descripcion</th>
-					<th>Cantidad</th>
-					<th>Imagen</th>
+			<thead >
+				<tr class="font-weight-bold">
+					<th th:text="id"></th>
+					<th th:text="Producto"></th>
+					<th th:text="Precio"></th>
+					<th th:text="Descripcion" ></th>
+					<th th:text="Cantidad"></th>
+					<th th:text="Imagen"></th>
 
 
 				</tr>
@@ -56,7 +56,7 @@
 			<tbody>
 				<tr th:each="Producto: ${Listado}">
 					<td><a class="btn btn-info"
-						th:href="@{/ver/} + ${Producto.id}" th:text="${Producto.id}"></td>
+						th:href="@{/ver/} + ${Producto.id}" th:text="${Producto.id}"/></td>
 					<td th:text="${Producto.producto}"></td>
 					<td th:text="${Producto.precio}"></td>
 					<td th:text="${Producto.descripcion}"></td>

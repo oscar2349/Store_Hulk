@@ -5,25 +5,39 @@
 <title th:text="titulo"></title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+.centrar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+</style>
+
 </head>
 <body>
 
+	<div class="centrar">
+		<div class="card border-info mb-3" style="max-width: 300px;">
+			<div class="row no-gutters">
+				<div class="col-md-12">
+					<img th:if="${inventario.foto != null}"
+						th:src="@{'/fotos/'+ ${inventario.foto}}" class="card-img"
+						th:alt="${inventario.foto}">
+				</div>
+				<div class="col-md-6">
+					<div class="card-body">
+						<h5 class="card-title" th:text=${inventario.producto}>Card
+							title</h5>
+						<p class="card-text" th:text=${inventario.descripcion}></p>
+						<p class="card-text">
+							<small class="text-muted"
+								th:text=" 'Disponibles : ' + ${inventario.cantidad}"></small>
 
-	<div class="card mb-3" style="max-width: 540px;">
-		<div class="row no-gutters">
-			<div class="col-md-4">
-				<img th:if="${inventario.foto != null}" th:src="@{'/fotos/'+ ${inventario.foto}}" class="card-img" th:alt="${inventario.foto}">
-			</div>
-			<div class="col-md-8">
-				<div class="card-body">
-					<h5 class="card-title" th:text=${inventario.producto}>Card
-						title</h5>
-					<p class="card-text" th:text=${inventario.descripcion}></p>
-					<p class="card-text">
-						<small class="text-muted" th:text=" 'Disponibles : ' + ${inventario.cantidad}" ></small>
-
-					</p>
-					<a th:href="@{/listado}" class="btn btn-primary">Ir al Listado</a>
+						</p>
+						<a th:href="@{/listado}" class="btn btn-primary">Ir al Listado</a>
+					</div>
 				</div>
 			</div>
 		</div>
